@@ -1,0 +1,20 @@
+.list-group {
+    padding: 0;
+    margin-bottom: -1px;
+}
+
+.list-group .list-group-item:last-child {
+    border-bottom: 1px solid #ddd;
+}
+
+.list-group-item .glyphicon {
+    margin-right: 5px;
+}
+
+.list-group-item {
+    border: 1px solid #ddd;
+}
+
+.list-group-item .glyphicon {
+    margin-right: 5px;
+}
