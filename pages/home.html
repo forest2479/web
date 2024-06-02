@@ -44,14 +44,11 @@
 <link rel="stylesheet" href="./home_files/css">
 
 <script>
-        // Kiểm tra trạng thái đăng nhập khi tải trang
-        window.onload = function() {
-            const isAuthenticated = sessionStorage.getItem('authenticated');
-            if (isAuthenticated !== 'true') {
-                alert('Bạn phải đăng nhập để truy cập trang này.');
-                window.location.href = 'index.html';
-            }
-        };
+        // Kiểm tra trạng thái đăng nhập trước khi tải nội dung trang
+        if (sessionStorage.getItem('authenticated') !== 'true') {
+            alert('Bạn phải đăng nhập để truy cập trang này.');
+            window.location.href = 'index.html';
+        }
     </script>
     
 <style>
