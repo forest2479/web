@@ -83,36 +83,9 @@
                 </div>
             </div>
         </div>
-        <div class="error-message" id="error-message" style="display: block;">Tên tài khoản hoặc mật khẩu không đúng. Vui lòng thử lại.</div>
+
 		
-<script>
-    document.addEventListener('DOMContentLoaded', function() {
-        // Đặt biến urlRedirect là URL của trang home.html
-        var urlRedirect = './pages/home.html';
-        var validUsername = '2233070';
-        var validPassword = 'Thai2233070';
 
-        // Xác định sự kiện gửi biểu mẫu
-        document.getElementById('fm1').addEventListener('submit', function(event) {
-            event.preventDefault(); // Ngăn chặn gửi biểu mẫu mặc định
-
-            // Lấy giá trị của tên người dùng và mật khẩu từ trường nhập liệu
-            var username = document.getElementById('username').value;
-            var password = document.getElementById('password').value;
-
-            // Kiểm tra thông tin đăng nhập
-            if (username === validUsername && password === validPassword) {
-                // Đăng nhập thành công, chuyển hướng đến trang home.html
-                window.location.href = urlRedirect;
-            } else {
-                // Hiển thị thông báo lỗi và làm trống trường nhập liệu
-                document.getElementById('error-message').style.display = 'block';
-                document.getElementById('username').value = '';
-                document.getElementById('password').value = '';
-            }
-        });
-    });
-</script>
 
 <script>
         document.getElementById('loginForm').addEventListener('submit', function(e) {
