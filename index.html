@@ -87,20 +87,33 @@
 		
 
 
-<script>
-        document.getElementById('loginForm').addEventListener('submit', function(e) {
-            e.preventDefault();
-            const username = document.getElementById('username').value;
-            const password = document.getElementById('password').value;
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var urlRedirect = './pages/home.html';
+            var validUsername = '2233070';
+            var validPassword = 'Thai2233070';
 
-            if (username === '2233070' && password === 'Thai2233070') {
-                sessionStorage.setItem('authenticated', 'true');
-                window.location.href = './pages/home.html';
-            } else {
-                alert('Tên tài khoản hoặc mật khẩu không đúng. Vui lòng thử lại.');
-            }
+            document.getElementById('fm1').addEventListener('submit', function(event) {
+                event.preventDefault();
+
+                var username = document.getElementById('username').value;
+                var password = document.getElementById('password').value;
+
+                if (username === validUsername && password === validPassword) {
+                    sessionStorage.setItem('authenticated', 'true');
+                    window.location.href = urlRedirect;
+                } else {
+                    var errorMessage = document.getElementById('error-message');
+                    errorMessage.style.display = 'block';
+                    setTimeout(function() {
+                        errorMessage.style.display = 'none';
+                    }, 3000);
+                    document.getElementById('username').value = '';
+                    document.getElementById('password').value = '';
+                }
+            });
         });
-</script>
+    </script>
         
 <script type="text/javascript" src="./index_files/jquery.min.js"></script>
 <script type="text/javascript" src="./index_files/jquery-ui.min.js"></script>
